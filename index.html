@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation </title>
+    <style>
+        /* Basic styles for demonstration */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        header {
+            background-color: #4a6fa5;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        
+        h2 {
+            color: #4a6fa5;
+            border-bottom: 2px solid #e7e7e7;
+            padding-bottom: 10px;
+        }
+        
+        button {
+            background-color: #4a6fa5;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #385d8a;
+        }
+        
+        #dynamic-text {
+            text-align: center;
+            font-size: 18px;
+            color: #4a6fa5;
+            padding: 15px;
+        }
+        
+        .style-demo-card {
+            transition: all 0.3s ease;
+        }
+        
+        .default-style {
+            background-color: white;
+        }
+        
+        .modified-style {
+            background-color: #e6f0ff;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .new-element {
+            background-color: #e6ffe6;
+            border-radius: 4px;
+            padding: 15px;
+            margin-top: 15px;
+            text-align: center;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        footer {
+            background-color: #4a6fa5;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Week 5 Assignment</h1>
+        <p>Explore JavaScript DOM Manipulation</p>
+    </header>
+    
+    <main>
+        <section>
+            <h2>1. Dynamic Text Content</h2>
+            <p id="dynamic-text">Text will change in a moment...</p>
+        </section>
+        
+        <section class="style-demo-card default-style">
+            <h2>2. Modify CSS with JavaScript</h2>
+            <p>Click the button below to change the styles of this section</p>
+            <div style="text-align: center;">
+                <button id="style-button">Toggle Styles</button>
+            </div>
+        </section>
+        
+        <section>
+            <h2>3. Add/Remove Elements</h2>
+            <p>Click the button to dynamically add or remove an element</p>
+            <div style="text-align: center;">
+                <button id="add-remove-button">Add Element</button>
+            </div>
+            <div id="element-container"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Mustafa Isaq. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
